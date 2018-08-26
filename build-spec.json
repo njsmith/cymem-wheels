@@ -1,10 +1,1 @@
-{
-    "clone-url": "https://github.com/explosion/spaCy.git",
-    "commit": "master",
-    "package-name": "spacy",
-    "upload-to": {
-        "type": "github-release",
-        "repo-id": "njsmith/cymem-wheels",
-        "release-id": "spacy-test"
-    }
-}
+64857bfb05041c5738398ba07bcbbc7b74022be4

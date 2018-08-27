@@ -16,7 +16,7 @@ services: docker
 # Don't generate builds for tags, PRs, or the master branch
 # https://docs.travis-ci.com/user/conditional-builds-stages-jobs/
 # https://docs.travis-ci.com/user/conditions-v1
-if: type = push AND tag IS blank AND branch =~ /^branch-for-/
+if: type = push AND tag IS blank AND (branch =~ /^branch-for-/ OR branch = master)
 
 matrix:
   include:
@@ -74,6 +74,7 @@ matrix:
         - MB_PYTHON_VERSION=3.7
 
 before_install:
+    - echo $GITHUB_SECRET_TOKEN
     - pip install -Ur ./mb-requirements.txt
     - eval $(python ./mb.py build_spec_to_shell build-spec.json)
     - git clone "${BUILD_SPEC_CLONE_URL}" "$REPO_DIR"

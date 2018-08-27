@@ -37,8 +37,10 @@ skip_tags: true
 branches:
   only:
     - /^branch-for-/
+    - master
 
 install:
+    - echo %GITHUB_SECRET_TOKEN%
     - echo "Filesystem root:"
     - dir C:\
     - echo "Installed SDKs:"

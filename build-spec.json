@@ -1,0 +1,1 @@
+{"clone-url": "https://github.com/explosion/murmurhash.git", "package-name": "murmurhash", "commit": "master", "upload-to": {"type": "github-release", "repo-id": "njsmith/cymem-wheels", "release-id": "murmurhash-master-wheels"}}
